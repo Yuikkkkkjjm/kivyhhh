@@ -1,0 +1,227 @@
+WidgetsLayoutExample:
+
+#:set s dp(150)
+
+# <navi>:
+#     canvas:
+        # Rectangle:
+        #     pos:self.center_x-s/2,self.center_y-s/2
+        #     size:s,s
+        # Ellipse:
+        #     pos:200,200
+        #     size:s,s/2
+
+        # Line:
+            #points:(self.center_x,self.top,self.center_x,self.bowtton)
+            #width:3  
+
+        # Color:
+        #     rgb:1 ,1,1
+        # Line:
+        #     circle:(200,200,100)
+        #     width:2    
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<WidgetsLayoutExample@GridLayout>:
+    cols:3
+    ToggleButton:
+        text:"off"
+        size_hint:None,1
+        width:100
+        on_state:root.on_toggle_button_state(self)
+    Button:
+        text:"count"
+        on_press:root.on_Button_Click()
+        disabled:not root.s
+    Label:
+        
+        text:root.my_text
+        font_size: 40
+	    font_name: "comic"
+           
+    Switch:
+        id:swi
+        on_active:root.on_switch_active(self)
+        size_hint:None,1
+        width:100 
+    Slider:
+        id:my
+       # on_value:root.on_slider_value(self)
+        min:0
+        max:100
+        value:50
+        disabled:not swi.active
+    BoxLayout:
+        orientation: "vertical"   
+        Label:
+            text:str(int(my.value)) #root.my
+            font_size: 40
+	        font_name   : "comic"
+        ProgressBar:
+            max:100
+            value:my.value
+
+    #Button:
+     #   text:"A"
+       # size: "40dp" ,"40dp"
+        #size_hint:0.5,0.5
+        #width:100
+        #height:100
+       # pos_hint:{"right":0.5}
+     
+    # Button:
+    #     orintation:"tb"
+    #     text:"input your name\n input number 0f sand \ninput nomber of asmant\n input which PAID UP"
+        
+    #     font_size:20
+    #     font_name   : "comic"
+    #     size_hint:None, None
+    #     width:230
+    #     height:350
+    #     pos_hint:{"center_y":0.5}
+    # TextInput: 
+    #     id:my_text 
+    #     size_hint:None,1
+    #     width:100
+    #     text:"foo" 
+    #     multiline:False
+    #     on_text_validate:root.on_text_validate(self)
+    
+
+    # Label:
+    #     text:"hello! "+root.text_input_str
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# PageLayoutExample:
+
+
+
+
+
+
+# <asdf@Scor>
+# <PageLayoutExample@PageLayout>:
+#     MainWidget:
+#     zx:
+
+    
+##<stackLayoutExample>:
+    # button:
+    #     text:"A"
+          
+            
+
+   
+
+# <zx@GridLayout>:
+#     cols:2
+#     rows:2
+    
+#     # Button:
+#     #     text:"A"
+
+#     # BoxLayoutExample:
+#     # Button:
+#     #     text:"C"
+#     # Button:
+#     #     text:"D"
+#     # Button:
+#     #     text:"E"
+#     # Button:
+#     #     text:"F"    
+
+# <asw>:
+#     anchor_x:"center"
+#     anchor_y:"top"
+    
+#     BoxLayout:
+#         size_hint:0.3,0.3
+#         Button:
+#             text:"A"
+#         Button:
+#             text:"B"   
+            
+        
+# <BoxLayoutExample>:       
+#     orientation:"horizontal"
+      
+    
+#         # multiline:False
+#         # on_text_validate:root.on_text_validate(self)
+#     stackLayoutExample:
+#         Button:
+#             text:"A"
+              
+
+    
+#     # Button:
+#     #     text:"A"
+#     #    # size: "40dp" ,"40dp"
+#     #     size_hint:0.5,1
+#     #     #width:100
+#     #     #height:100
+#     #     pos_hint:{"right":0.5}
+
+#     # BoxLayout:
+#     #     orientation:"vertical" 
+#     #     spacing:"10dp" 
+#     #     Button:
+#     #         text:"B1"
+#     #     Button:
+#     #         text:"B2"
+
+#     #     Button:
+#     #         text:"B3"        
+#     # #
+#     # Label:
+#     #     text:"C"            
+                
+
+
+# # <MainWidget>:
+# #     Button:
+# #         text:  "hello"
+# #         size: "40dp" ,"40dp"
+# #         pos: "100dp","200dp"
+# #         color: 0 , 0 , 1 , 1
+# #     Label:
+# #         text:  "hello2"
+# #         size: "40dp" ,"40dp"
+# #         pos: "150dp","250dp"
+# #         color: 1 , 0 , 0 , 1
