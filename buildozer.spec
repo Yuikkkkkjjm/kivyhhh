@@ -1,11 +1,10 @@
 [app]
 
 # (str) Title of your application
-title = Write To Kivy
+title =Myapp
 
 # (str) Package name
-package.name = KivyTest
-
+package.name = Myapp
 # (str) Package domain (needed for android/ios packaging)
 package.domain = org.YourName
 
@@ -37,7 +36,7 @@ version = 0.404
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy,sdl2_ttf,pillow
+requirements = python3,kivy==2.0.0,sdl2_ttf,pillow
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
